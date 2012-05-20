@@ -1,0 +1,39 @@
+Boxes to BEANs conversion feature module for Drupal 7.
+
+"All your sites should be full of BEANs!"
+
+This module allows site administrators to move easily from the boxes
+to bean for editable blocks.  This module requires the bean module[1]
+and features[2].  Once you have enabled the bean_boxes module you can 
+run the conversion script. In your document root run the following command:
+
+drush scr sites/all/modules/bean_boxes/scripts/convert-boxes.php
+
+This script will convert all of your boxes to beans and update all
+of your contexts to use the newly created beans.
+
+FAQ
+Why are beans better than boxes?
+Boxes are treated like configuration, which makes it easy to export
+them to features, but it is annoying when users start overriding them.
+BEANs are entities and are treated like content, which means you can
+deploy them with the deploy module[3].
+
+Why should I care about bean? I love boxes.
+I used to love boxes too, until I started doing feature reverts as part
+of the standard deployment process.
+
+The 7.x-2.x branch of boxes is actually bean with some of the boxes UI,
+so soon you'll be using bean anyway.  Don't belive me? Check the changelog
+http://drupalcode.org/project/boxes.git/blob/refs/heads/7.x-2.x:/CHANGELOG.TXT
+
+You suck I'm going to keep using boxes!
+That's a statement, not a question. I never said you have to use bean, I just 
+think it is a better module. You can keep on using boxes. You can still run 
+PHP4 with Drupal 4.7 today, but that doesn't mean it is a good idea. I heard 
+Windows 98 will run on older hardware without too. I'll leave you to watch 
+Juaraic Park, feel free to email me and tell me how cutting edge that CGI is.
+
+[1] http://drupal.org/project/bean
+[2] http://drupal.org/project/features
+[3] http://drupal.org/project/deploy

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Bean Boxes feature.
+ */
+
+include_once('bean_boxes.features.inc');
